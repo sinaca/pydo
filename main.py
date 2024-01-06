@@ -6,8 +6,7 @@ from kivy.core.video import Video
 from kivy.uix.widget import widget
 from kivy.uix.button import Button 
 class start(Widget): 
-    def __init__(self):
-        super(start, self). __init__(self,**kwgs)
+    pass
            
 
  

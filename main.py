@@ -1,5 +1,5 @@
 from kivy.app import App 
-from kivy.uix.boxlayout import Boxlayout 
+from kivy.uix.boxlayout import BoxLayout 
 from kivy.uix.label import Label 
 from plyer import vibrator 
 from kivy.core.video import Video 

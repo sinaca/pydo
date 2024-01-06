@@ -11,7 +11,7 @@ class start(Widget):
 
  
         
-class TestApp(App):
+class royaleApp(App):
     def build(self):
         return start() 
-TestApp().run()
+royaleApp().run()

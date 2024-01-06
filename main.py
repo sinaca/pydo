@@ -5,13 +5,14 @@ from plyer import vibrator
 from kivy.core.video import Video 
 from kivy.uix.widget import Widget
 from kivy.uix.button import Button 
-class start(Widget): 
+class Start(Widget): 
     pass
            
 
- 
+ class Finish(Widget):
+     pass 
         
-class royaleApp(App):
+class RoyaleApp(App):
     def build(self):
         return start() 
-royaleApp().run()
+RoyaleApp().run()

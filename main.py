@@ -14,6 +14,8 @@ class Start(Widget):
         pass 
     def logout() :
         pass 
+    def vibrat() :
+        vibrator(10) 
            
 
  class Finish(Widget):

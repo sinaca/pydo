@@ -6,7 +6,14 @@ from kivy.core.video import Video
 from kivy.uix.widget import Widget
 from kivy.uix.button import Button 
 class Start(Widget): 
-    pass
+    def check() :
+        pass 
+    def register () :
+        pass 
+    def login() :
+        pass 
+    def logout() :
+        pass 
            
 
  class Finish(Widget):

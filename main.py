@@ -7,12 +7,12 @@ from kivy.uix.widget import widget
 from kivy.uix.button import Button 
 class start(Widget): 
     def __init__(self):
-        super(start, self). __init__(**kwgs)
+        super(start, self). __init__(self, **kwgs)
            
 
  
         
 class TestApp(App):
     def build(self):
-        return Button(text='Hello world')
+        return start() 
 TestApp().run()

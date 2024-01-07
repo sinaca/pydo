@@ -94,26 +94,3 @@ class RoyaleApp(App):
         return start() 
 RoyaleApp().run()
 
-    
-import PyPDF2
-
-def merge_pdfs(input_pdf1, input_pdf2, output_pdf):
-    with open(input_pdf1, 'rb') as file1, open(input_pdf2, 'rb') as file2:
-        pdf_reader1 = PyPDF2.PdfFileReader(file1)
-        pdf_reader2 = PyPDF2.PdfFileReader(file2)
-
-        pdf_writer = PyPDF2.PdfFileWriter()
-
-        for page_num in range(pdf_reader1.numPages):
-            page = pdf_reader1.getPage(page_num)
-            pdf_writer.addPage(page)
-
-        for page_num in range(pdf_reader2.numPages):
-            page = pdf_reader2.getPage(page_num)
-            pdf_writer.addPage(page)
-
-        with open(output_pdf, 'wb') as output_file:
-            pdf_writer.write(output_file)
-
-# Example usage
-

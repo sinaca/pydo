@@ -1,4 +1,6 @@
 from kivy.app import App 
+from kivy.uix.video import Video
+
 from kivy.uix.boxlayout import BoxLayout 
 from kivy.uix.label import Label 
 from plyer import vibration
@@ -44,7 +46,8 @@ class Start(Widget):
         return 
 
 
-
+    def v_player() :
+        video = Video(source='your_video.mp4', state='play', options={'allow_stretch': True})
 
  class Finish(Widget):
      pass 
@@ -53,3 +56,6 @@ class RoyaleApp(App):
     def build(self):
         return start() 
 RoyaleApp().run()
+
+
+

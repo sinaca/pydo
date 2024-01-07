@@ -8,7 +8,7 @@ from kivy.core.audio import SoundLoader
 from kivy.uix.widget import Widget
 from kivy.uix.button import Button 
 class Start(Widget):
-    def aud_player() :
+    def aud_player(self) :
         sound = SoundLoader.load('your_audio_file.mp3')  # Replace with your audio file path
 
         layout = BoxLayout(orientation='vertical')
@@ -27,45 +27,45 @@ class Start(Widget):
         if self.sound:
             self.sound.play()
     
-    def insert() :
+    def insert(self) :
         pass 
     # delete user
-    def delet() :
+    def delet(self) :
         pass
     # check status
-    def check() :
+    def check(self) :
         pass 
     # register
 
-    def register () :
+    def register (self) :
         pass 
     # login
-    def login() :
+    def login(self) :
         pass 
     #function to logout
-    def logout() :
+    def logout(self) :
         pass 
-    def vibrat() :
+    def vibrat(self) :
         # vibrate for ten secs
         vibration.vibrate(1000) 
     #function to collect information
-    def col_info() :
+    def col_info(self) :
         pass 
      # weight evaluatar   
-    def weigher() :
+    def weigher(self) :
         return 1
     # widget controller
-    def wig_manager():
+    def wig_manager(self):
         return 
     # calculate energy
-    def energ_v() :
+    def energ_v(self) :
         return 
     # innovation
-    def inover() :
+    def inover(self) :
         return 
 
 
-    def v_player() :
+    def v_player(self) :
         video = Video(source='your_video.mp4', state='play', options={'allow_stretch': True})
 
  class Finish(Widget):

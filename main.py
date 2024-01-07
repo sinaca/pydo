@@ -1,4 +1,5 @@
 from kivy.app import App 
+import PyPDF2
 from kivy.uix.video import Video
 
 from kivy.uix.boxlayout import BoxLayout 
@@ -63,17 +64,56 @@ class Start(Widget):
     # innovation
     def inover(self) :
         return 
+    
+    def merge_pdfs(input_pdf1, input_pdf2, output_pdf):
+        with open(input_pdf1, 'rb') as file1, open(input_pdf2, 'rb') as file2:
+            pdf_reader1 = PyPDF2.PdfFileReader(file1)
+            pdf_reader2 = PyPDF2.PdfFileReader(file2)
 
+            pdf_writer = PyPDF2.PdfFileWriter()
 
-    def v_player(self) :
+        for page_num in range(pdf_reader1.numPages):
+            page = pdf_reader1.getPage(page_num)
+            pdf_writer.addPage(page)
+
+        for page_num in range(pdf_reader2.numPages):
+            page = pdf_reader2.getPage(page_num)
+            pdf_writer.addPage(page)
+
+        with open(output_pdf, 'wb') as output_file:
+            pdf_writer.write(output_file)
+            
+            
+     def v_player(self) :
         video = Video(source='your_video.mp4', state='play', options={'allow_stretch': True})
 
- class Finish(Widget):
+class Finish(Widget):
      pass 
-        
 class RoyaleApp(App):
     def build(self):
         return start() 
 RoyaleApp().run()
+
     
+import PyPDF2
+
+def merge_pdfs(input_pdf1, input_pdf2, output_pdf):
+    with open(input_pdf1, 'rb') as file1, open(input_pdf2, 'rb') as file2:
+        pdf_reader1 = PyPDF2.PdfFileReader(file1)
+        pdf_reader2 = PyPDF2.PdfFileReader(file2)
+
+        pdf_writer = PyPDF2.PdfFileWriter()
+
+        for page_num in range(pdf_reader1.numPages):
+            page = pdf_reader1.getPage(page_num)
+            pdf_writer.addPage(page)
+
+        for page_num in range(pdf_reader2.numPages):
+            page = pdf_reader2.getPage(page_num)
+            pdf_writer.addPage(page)
+
+        with open(output_pdf, 'wb') as output_file:
+            pdf_writer.write(output_file)
+
+# Example usage
 

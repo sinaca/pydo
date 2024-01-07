@@ -6,17 +6,30 @@ from kivy.core.video import Video
 from kivy.uix.widget import Widget
 from kivy.uix.button import Button 
 class Start(Widget): 
+    def insert() :
+        pass 
+    def delet() :
+        pass
+
     def check() :
         pass 
     def register () :
         pass 
     def login() :
         pass 
+    #function to logout
     def logout() :
         pass 
     def vibrat() :
         # vibrate for ten secs
         vibration.vibrate(1000) 
+    #function to collect information
+    def col_info() :
+        pass 
+     # weight evaluatar   
+    def weigher() :
+        return 1
+    
            
 
  class Finish(Widget):

@@ -29,8 +29,12 @@ class Start(Widget):
      # weight evaluatar   
     def weigher() :
         return 1
-    
-           
+    # widget controller
+    def wig_manager():
+        return 
+
+
+
 
  class Finish(Widget):
      pass 

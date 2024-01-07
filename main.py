@@ -32,6 +32,12 @@ class Start(Widget):
     # widget controller
     def wig_manager():
         return 
+    # calculate energy
+    def energ_v() :
+        return 
+    # innovation
+    def inover() :
+        return 
 
 
 

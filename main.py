@@ -8,13 +8,17 @@ from kivy.uix.button import Button
 class Start(Widget): 
     def insert() :
         pass 
+    # delete user
     def delet() :
         pass
-
+    # check status
     def check() :
         pass 
+    # register
+
     def register () :
         pass 
+    # login
     def login() :
         pass 
     #function to logout

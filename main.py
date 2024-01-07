@@ -8,6 +8,16 @@ from kivy.core.audio import Audio
 from kivy.uix.widget import Widget
 from kivy.uix.button import Button 
 class Start(Widget):
+    def aud_player() :
+        sound = SoundLoader.load('your_audio_file.mp3')  # Replace with your audio file path
+
+        layout = BoxLayout(orientation='vertical')
+        
+        play_button = Button(text='Play', on_press=self.play_audio)
+        stop_button = Button(text='Stop', on_press=self.stop_audio)
+        
+        layout.add_widget(play_button)
+        layout.add_widget(stop_button) 
     # stop audio
     def stop_audio(self, instance):
         if self.sound:
@@ -65,37 +75,5 @@ class RoyaleApp(App):
     def build(self):
         return start() 
 RoyaleApp().run()
-
-self.sound = SoundLoader.load('your_audio_file.mp3')  # Replace with your audio file path
-
-        layout = BoxLayout(orientation='vertical')
-        
-        play_button = Button(text='Play', on_press=self.play_audio)
-        stop_button = Button(text='Stop', on_press=self.stop_audio)
-        
-        layout.add_widget(play_button)
-        layout.add_widget(stop_button)
-        
-        return layout
-
-    def play_audio(self, instance):
-        if self.sound:
-            self.sound.play()
-
-    def stop_audio(self, instance):
-        if self.sound:
-            self.sound.stop()
-
-if __name__ == '__main__':
-    AudioPlayerApp().run()
-Replace 'your_audio_file.mp3' with the path to your actual audio file. This is a simple example, and you might want to add more features like volume control, seek bar, etc., based on your requirements.
-
-
-
-
-
-
-Message ChatGPT…
-
-ChatGPT can make mistakes. Consider checking impor
+    
 
